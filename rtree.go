@@ -15,7 +15,9 @@ type rnode struct{
 }
 // New 创建一个空树
 func NewRtree()*RTree{
-	return &RTree{}
+	return &RTree{
+		root: &rnode{},
+	}
 }
 // Insert 插入 key 对应的value 
 // 如果key已存在，会覆盖旧值
